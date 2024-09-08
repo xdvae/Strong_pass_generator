@@ -48,7 +48,6 @@ while len(password) < pass_length:
             password.append(word)
             alp_generated+=1
 
-    
     elif rand_num != 1 and num_generated < num_needed:
         rand_num = random.randint(0 , num_size - 1)
         password.append(numbers[rand_num])
