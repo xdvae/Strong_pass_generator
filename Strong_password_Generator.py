@@ -8,8 +8,24 @@ numbers = [0,1,2,3,4,5,6,7,8,9]
 # Below is the import Var's required for this.
 alp_size = len(alphabets)
 num_size = len(numbers)
-alp_needed = int(input("How many alphabets do you want: "))
-num_needed = int(input("How many numbers do you need: "))
+alp_needed = ""
+num_needed = ""
+
+# Ensure the user enters a number only.
+while True:
+    try:
+        alp_needed = int(input("How many alphabets do you want: "))
+        break
+    except ValueError:
+        print("Enter a number.")
+        
+while True:
+    try:
+        num_needed = int(input("How many numbers do you need: "))
+        break
+    except ValueError:
+        print("Enter a number.")
+        
 pass_length = alp_needed + num_needed
 password = []
 
@@ -41,5 +57,3 @@ while len(password) < pass_length:
 # Joins the (password) list into a string.
 pass_str = ''.join(map(str,password))
 print(pass_str)
-
-
